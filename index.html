@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Використання оператора for...in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #e0f7fa, #80deea);
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Демонстрація циклу for...in</h1>
+        <script>
+            "use strict";
+
+            // Об'єкт, що містить інформацію про студентів
+            let students = {
+                "Іван": 85,
+                "Марія": 92,
+                "Олександр": 78,
+                "Анна": 88
+            };
+
+            document.write("<p>Оцінки студентів:</p>");
+            for (let studentName in students) {
+                let grade = students[studentName];
+                document.write(studentName + " - " + grade + "<br>");
+            }
+        </script>
+    </div>
+</body>
+</html>
